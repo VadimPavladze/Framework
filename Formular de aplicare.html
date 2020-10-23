@@ -1,0 +1,85 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<table border="1" width="100%">
+<table>
+<div ng-app="myApp" ng-controller="myCtrl">
+<h1>Formular de aplicare</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.doc type = "Formular de aplicare";
+});
+</script>
+
+Nume: <input type="text" ng-model="Nume"><br>
+Prenume: <input type="text" ng-model="Prenume"><br>
+Data Nasterii:<input type="date" ng-model="MyVar"><br>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.Nume = "John";
+    $scope.Prenume = "Doe";
+});
+
+</script>
+<p>Genul:</p>
+<input type="checkbox" ng-checked="all">Masculin<br>
+<input type="checkbox" ng-checked="all">Feminin<br>
+</select>
+
+
+</script>
+ <form>
+ <b>Studii:</b> <br>
+ <input type="radio" ng-model="myVar" value="medii">Medii<br>
+ <input type="radio" ng-model="myVar" value="superioare">Superioare<br>
+ <input type="radio" ng-model="myVar" value="masterat">Masterat<br>
+ </form>
+ </div><br><br>
+
+
+
+<form>
+<p>Catedra</p>
+  <select ng-model="myVar">
+    <option value="">
+    <option value="Chimie">Chimie
+    <option value="Matematica">Matematica
+    <option value="Informatica">Informatica
+  </select>
+<div>
+ 
+<p><u>Introduceti un numar ce salariu veti dori sa aveti:</u></p>
+<p><b>Salariu:</b> <input name="amount" type="number"></p>            
+</div>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<div ng-show="showMe">
+<h3>Lista posturilor:</h3>
+<div>Lector</div>
+<div>Professor</div>
+<div>Decan</div>
+            </div>
+        </div>
+            <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.showMe = false;
+                $scope.myFunc = function() {
+                    $scope.showMe = !$scope.showMe;
+                }
+            });
+            </script>   
+<form #myForm='ngForm' (ngSubmit)='mySubmit(myForm.value)'>
+    <hr>
+   <button type="reset" class="btn btn-default">Reset</button>
+   <button type="submit" class="btn btn-primary">OK</button>
+</form>
+</body>
+<html>
